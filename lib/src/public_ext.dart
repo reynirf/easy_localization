@@ -130,8 +130,8 @@ extension BuildContextEasyLocalizationExtension on BuildContext {
   Locale get locale => EasyLocalization.of(this)!.locale;
 
   /// Change app locale
-  Future<void> setLocale(Locale val) async =>
-      EasyLocalization.of(this)!.setLocale(val);
+  Future<void> setLocale(Locale val, {bool forceUpdate = false}) async =>
+      EasyLocalization.of(this)!.setLocale(val, forceUpdate: forceUpdate);
 
   /// Old Change app locale
   @Deprecated(
