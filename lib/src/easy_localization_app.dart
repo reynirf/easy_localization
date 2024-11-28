@@ -291,7 +291,7 @@ class _EasyLocalizationProvider extends InheritedWidget {
 
   @override
   bool updateShouldNotify(_EasyLocalizationProvider oldWidget) {
-    return oldWidget.currentLocale != locale;
+    return true;
   }
 
   static _EasyLocalizationProvider? of(BuildContext context) =>
@@ -338,5 +338,5 @@ class _EasyLocalizationDelegate extends LocalizationsDelegate<Localization> {
   }
 
   @override
-  bool shouldReload(LocalizationsDelegate<Localization> old) => false;
+  bool shouldReload(LocalizationsDelegate<Localization> old) => true;
 }
